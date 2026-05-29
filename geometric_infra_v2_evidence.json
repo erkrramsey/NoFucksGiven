@@ -1,0 +1,72 @@
+{
+  "version": "geo-infra-v2-hardpush",
+  "seed": 20260528,
+  "tests": {
+    "swap_delta_identity": {
+      "trials": 300,
+      "n": 16,
+      "pass": true
+    },
+    "float64_exactness": {
+      "pass": true,
+      "trials": 500,
+      "n": 16,
+      "max_int_objective": 49168,
+      "max_abs_float_error": 0.0,
+      "two_to_53": 9007199254740992
+    },
+    "exhaustive_small": {
+      "pass": true,
+      "global_optimum": 6489,
+      "best_local_final": 6489,
+      "best_gap": 0
+    },
+    "ribbon_orders": {
+      "hilbert": 1050248,
+      "morton": 992408,
+      "snake": 971568,
+      "row_major": 971568,
+      "random_mean": 2317939.02,
+      "random_min": 2120761,
+      "random_max": 2501095,
+      "random_std": 60904.294430849455,
+      "hilbert_vs_random_mean_reduction": 0.5469043875019628,
+      "best_named": "snake"
+    },
+    "rack_cluster": {
+      "random_start": 3492265,
+      "random_local_final": 810605,
+      "random_local_moves": 36,
+      "cluster_packed": 811270,
+      "cluster_packed_refined": 809693,
+      "cluster_packed_refinement_moves": 22,
+      "packed_vs_random_reduction": 0.7676951777714464,
+      "local_vs_random_reduction": 0.7678855986014806
+    },
+    "dynamic_drift": {
+      "J_on_W1_after_initial_placement": 591957,
+      "J_on_W2_before_remap": 2872404,
+      "J_on_W2_after_thresholded_remap": 592521,
+      "accepted_remap_moves": 9,
+      "migration_cost_per_swap": 1000,
+      "drift_reduction": 0.7937194767866915
+    },
+    "null_cases": {
+      "uniform_invariant": true,
+      "uniform_unique_scores": [
+        196560
+      ],
+      "expander_random_mean": 1674747.0,
+      "expander_random_std": 5812.544852873539,
+      "expander_local_reduction": 0.03467944877171959,
+      "expander_moves": 20
+    }
+  },
+  "figures": [
+    "/mnt/data/geo_v2_figures/dynamic_drift_remap.png",
+    "/mnt/data/geo_v2_figures/rack_cluster_comparison.png",
+    "/mnt/data/geo_v2_figures/ribbon_order_comparison.png",
+    "/mnt/data/geo_v2_figures/swap_descent_trajectory.png"
+  ],
+  "evidence_root": "cff9b39527b2746771d855214e3d7e1d7aa3092bfb990aa7854c9393363afd2c"
+}
